@@ -1,10 +1,10 @@
-//#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 #include<fstream>
 #include<ctime>
 #include"Worker_School.h"
-#define LUJING "³ÌĞò±¨¸æ.txt"
-#define MYNAME "ÖÜÏòÑô" 
+#define LUJING "ç¨‹åºæŠ¥å‘Š.txt"
+#define MYNAME "å°å‘¨" 
 using namespace std;
 void worke()
 {
@@ -15,17 +15,17 @@ void worke()
 	{
 		SW.pring_UI();
 		cin >> User_cin;
-		if (User_cin == 1)//´¦Àí½øÈë
+		if (User_cin == 1)//å¤„ç†è¿›å…¥
 		{
 			SW.Worke_Worker_School();
 		}
-		else if (User_cin == 2)//´¦ÀíÍË³ö
+		else if (User_cin == 2)//å¤„ç†é€€å‡º
 		{
 			SW.exit_Worker_School();
 		}
 		else
 		{
-			cout << "ÓÃ»§Î´ÕıÈ·Ñ¡ÔñÑ¡Ïî!" << endl;
+			cout << "ç”¨æˆ·æœªæ­£ç¡®é€‰æ‹©é€‰é¡¹!" << endl;
 		    system("pause");
 		}
 	}
@@ -37,15 +37,16 @@ int main()
 	time_t now = time(0);
 	tm* ltm = localtime(&now);
 	fst << "------------------------------" << endl;
-	fst << "³ÌĞò±¨¸æ" << endl;
-	fst << "±¨¸æÈË: " << MYNAME << endl;
-	fst<<"±¨¸æÊ±¼ä:"<< ltm->tm_year<<"Äê"<< ltm->tm_mon<<"ÔÂ"<< ltm->tm_mday<<"ÈÕ"<<"Ê±¼ä"<< ltm->tm_hour << ":";
+	fst << "ç¨‹åºæŠ¥å‘Š" << endl;
+	fst << "æŠ¥å‘Šäºº: " << MYNAME << endl;
+	fst<<"æŠ¥å‘Šæ—¶é—´:"<< ltm->tm_year<<"å¹´"<< ltm->tm_mon<<"æœˆ"<< ltm->tm_mday<<"æ—¥"<<"æ—¶é—´"<< ltm->tm_hour << ":";
 	fst << ltm->tm_min << ":";
 	fst << ltm->tm_sec << endl;
 	fst << "------------------------------" << endl;
-	fst << "±¨¸æÄÚÈİ:" << endl;
-	fst << "³ÌĞòÒÔÕı³£Æô¶¯" << endl;
+	fst << "æŠ¥å‘Šå†…å®¹:" << endl;
+	fst << "ç¨‹åºä»¥æ­£å¸¸å¯åŠ¨" << endl;
 	fst.close();
 	worke();
 	return 0;
+
 }
